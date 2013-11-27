@@ -1,0 +1,51 @@
+{% extends "gallery_remodeling.html" %}
+
+{% load staticfiles %}
+
+{% block content %}
+
+<div id="content_opacity">
+			</div>
+<div class="content_background" style="min-height: 700px;">
+
+<h3>Photo Gallery - {% block gallery_title %}Decks{% endblock %}</h3>
+
+
+
+<div id="galleria">
+    {% block gallery_imgs %}
+    <img src="{% static "img/home/deck.jpg" %}" data-title="" data-description="" title="Deck" alt="blah blah">
+    <img src="{% static "img/home/porch.jpg" %}" data-title="" data-description="">
+    <img src="{% static "img/home/kitchen.jpg" %}" data-title="" data-description="">
+    <img src="{% static "img/home/bathroom.jpg" %}" data-title="" data-description="">
+        {% endblock %}
+</div>
+
+
+<div class="gallery_sidebar">
+
+    <ul>
+        <li style="margin-top:-50px; text-align:center; color: #A5B557; font-size:1.1em;">Other Galleries</li>
+        {% block gallery_sidenav %}
+        <li><a href="./gallery_remodeling.html" class="gallery_link"><img src="{% static "img/home/porch.jpg" %}"><div class="gallery_link">Remodeling</div></a></li>
+        <li><a href="./gallery_additionss.html"><img src="{% static "img/home/deck.jpg" %}"><div class="gallery_link">Home Additions</div></a></li>
+        <li><a href="./gallery_kitchens.html"><img src="{% static "img/home/kitchen.jpg" %}"><div class="gallery_link">Kitchens</div></a></li>
+        <li><a href="./gallery_bathrooms.html"><img src="{% static "img/home/bathroom.jpg" %}"><div class="gallery_link">Bathrooms</div></a></li>
+        {% endblock %}
+    </ul>
+
+</div>
+
+<script>
+    Galleria.loadTheme("{% static "galleria/themes/twelve/galleria.twelve.min.js" %}");
+    Galleria.configure({
+        lightbox: true,
+        showInfo: true,
+        
+    });
+    Galleria.run('#galleria');
+</script>
+
+</div>
+
+{% endblock %}

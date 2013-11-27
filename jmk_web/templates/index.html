@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="title" content="JMK Builders - Your Local Remodeler">
+        <meta name="description" content="Local builder, Construction, Additions, Porches, Decks, Residential Construction, Smaller Jobs, Restoration, Remodeling, Central New Jersey">
+        <meta name="keywords" content="Local builder, Construction, Additions, Porches, Decks, Residential Construction, Smaller Jobs, Restoration, Remodeling, Central New Jersey">
+        
+		{% load staticfiles %}
+		<link rel="stylesheet" type="text/css" href="{% static "css/index.css" %}" />
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        
+		<!-- Menu -->
+		<link rel="stylesheet" href="{% static "css/jquery.megamenu.css" %}" type="text/css" media="screen" />
+		<script src="{% static "js/jquery.megamenu.js" %}" type="text/javascript"></script>
+		<script type="text/javascript" src="{% static "js/menu.js" %}"></script>
+		<script type="text/javascript">
+            jQuery(document).ready(function(){
+            		jQuery(".megamenu").megamenu({ 'justify':'left' });
+            	});
+        </script>
+		
+        <!-- Slider -->
+		<link rel="stylesheet" href="{% static "css/nivo-slider.css" %}" type="text/css" media="screen" />
+		<script src="{% static "js/jquery.nivo.slider.js" %}" type="text/javascript"></script>
+		<link rel="stylesheet" href="{% static "css/slider-theme.css" %}" type="text/css" media="screen" />
+        <script type="text/javascript">
+            $(window).load(function() {
+            		$('#slider').nivoSlider();
+            });
+        </script>
+		
+		{% block staticfiles %}
+		{% endblock %}
+		
+        <!-- Fonts --> 
+        <link href='http://fonts.googleapis.com/css?family=Doppio+One|Lato|Kaushan+Script|Open+Sans' rel='stylesheet' type='text/css'>
+        
+		<title>{% block title %}JMK Builders - Your Local Remodeler{% endblock %}</title>
+		
+        <!-- Google analytics -->
+		<script type="text/javascript"> </script>
+		
+		
+    </head>
+	
+	
+<body style="">
+    <div class="page-wrapper">
+        <div class="header">
+            <div id="left">
+                <a href="index.html" id="link" name="link"><img src="{% static "img/logo_small_v2.png" %}" alt="JMK Builders" /></a>
+            </div>
+			<div id="right">
+				<div id="right" class="header_tagline">
+				Your Local Remodeler
+				</div>
+				<div class="header_subtagline">
+				Servicing central New Jersey since 1984
+				</div>
+			</div>
+			
+        </div>
+		
+        <div class="top-menu">
+            <!--MegaMenu Starts-->
+
+            <ul class="megamenu">
+                <li>
+                    <a href="./about.html" id="nav_company" name="nav_company">Our Company</a>
+
+                    <div class="menu-list" id="nav_company">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+
+                            <li><a href="about.html">About Us</a></li>
+
+                            <li><a href="process.html">Our Process</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li>
+                    <a href="gallery_remodeling.html" id="nav_gallery" name="nav_gallery">Gallery</a>
+
+                    <div class="menu-list" id="nav_gallery">
+                        <ul>
+                            <li><a href="gallery_additions.html">Additions</a></li>
+
+                            <li><a href="gallery_remodeling.html">Remodeling</a></li>
+
+                            <li><a href="gallery_decks.html">Decks</a></li>
+
+                            <li><a href="gallery_kitchens.html">Kitchens</a></li>
+
+                            <li><a href="gallery_bathrooms.html">Bathrooms</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li>
+                    <a href="./contact.html">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="content-wrapper">
+			
+			{% block content %}
+
+			<div id="opacity">
+			</div>
+
+            <div class="home_background">
+                <div class="slider-container">
+                    <div class="slider-wrapper theme-default">
+                        <div class="ribbon"></div>
+
+                        <div id="slider" class="nivoSlider"><img src="{% static "img/home/kitchen.png" %}" alt="Kitchens" title="#quib1" name=
+                        "quib1_highlight" id="quib1_highlight" /> <img src="{% static "img/home/porch.jpg" %}" alt="Porches" title="#quib2" name=
+                        "quib2_highlight" id="quib2_highlight" /> <img src="{% static "img/home/bathroom.jpg" %}" alt="Bathrooms" title="#quib3" name=
+                        "quib3_highlight" id="quib3_highlight" /> <img src="{% static "img/home/deck.jpg" %}" alt="Decks" title="#quib4" name=
+                        "quib4_highlight" id="quib4_highlight" /></div>
+                    </div>
+                </div>
+
+                <div class="home_content">
+                    <div id="left" style="width:500px">
+                        <h3>Over 20 Years of Remodeling and Restoration</h3>
+
+                        <p>Mobile Impact is a consulting company with extensive experience in wireless ecosystems. We would like to learn about your
+                        challenges and help you resolve them. Is your company defining, developing and deploying cutting edge emerging products or
+                        mobile data services? Do you want to have the confidence that your company is receiving world-class pricing, support and
+                        services from your vendors? Are you in immediate need of some specific expertise to support a project? Does your team need
+                        neutral, unbiased experts to help transform your processes? Mobile Impact delivers consulting solutions to such complex
+                        concerns and we are ready to help solve yours. <a href="about.html">Read more</a>.</p><br />
+                    </div>
+
+                    <div id="right" class="category_menu">
+                        <h3 style="margin-right:215px">Get to Know Us</h3>
+
+                        <p style="margin-top: 5px; width: 260px;margin-left:22px">Find us on Facebook to see even more photos of our work.</p>
+                    </div>
+                </div>
+
+				{% endblock %}
+
+
+                <div id="home-fix"></div>
+            </div>
+        </div>
+
+        <div class="push"></div>
+    </div>
+
+    <div class="footer">
+        <p><span id="left">&copy; 2013 JMK Builders, Inc. &nbsp; All Rights Reserved.</span> <span id="center">NJ License/Certification #13VH00615900</span> <span id="right"><a href="../terms.html">Terms of Use</a>
+        &nbsp;|&nbsp; <a href="../terms.html#privacy">Privacy Policy</a> &nbsp;|&nbsp; <a href="../contact.html">Contact Us</a></span></p>
+    </div>
+</body>
+</html>
+
+</html>

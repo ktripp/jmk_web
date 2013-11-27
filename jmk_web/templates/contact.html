@@ -1,0 +1,58 @@
+{% extends "index.html" %}
+
+{% block staticfiles %}
+    {% load staticfiles %}
+    <script src="{% static "js/jquery.form.js" %}" type="text/javascript"></script>
+    <script src="{% static "js/jquery.validate.js" %}" type="text/javascript"></script>
+    <script src="{% static "js/submit_contact.js" %}" type="text/javascript"></script>
+{% endblock %}
+
+
+{% block title %}JMK Builders - Contact Us{% endblock %}
+
+{% block content %}
+
+<div id="content_opacity" class="content_background" style="min-height: 550px;">
+    
+<h3>Contact Us</h3>
+
+<div class="contact_form" >
+			<form action="{% static "cgi-bin/submit_contact.php" %}" method="post" enctype="multipart/form-data" id="contact_form"> {% csrf_token %}
+			    <div id="form_content" style="display: inline;">
+                <p class="content_p">Considering new home construction or a remodeling project? We'd like to discuss it with you. 
+Please contact us at our office or use our information form below and we'll be in touch.</p>
+					<p>
+						<label for="fname">First Name <em>*</em> </label><input type="text" name="fname" value=""/>
+						<label for="lname">Last Name <em>*</em></label><input type="text" name="lname" value=""/>
+					</p>
+                    <p>
+						<label for="title">Address</label><input type="text" name="title" value="" style="width: 365px"/>
+					</p>
+					<p>
+					    <label for="phone">Phone Number <em>*</em></label><input type="text" name="phone" value="" />
+					    <label for="email">Email Address <em>*</em></label><input type="text" name="email" value="" />
+					</p>
+					
+					<p>
+					    <label for="comments">Comments</label><textarea rows="8" cols="50" name="comments" style="margin-bottom:2px;"></textarea>
+					</p>
+					<p style="font-size:0.6em; margin-left:155px;margin-top:-10px; margin-bottom:3px; width: 380px;">Please let us know what type of project you are interested in and we will get back to you as soon as possible.</p>
+	 
+				<p style="margin-top:10px;margin-bottom:70px;">
+					<span class="error_wrapper"><span id="error" class="error"> </span></span>
+					<input type="hidden" name="submitted" value="1">
+					<button type="submit" value="submit">Submit</button>
+					<img id="uploading" src="{% static "img/uploading.gif" %}" style="margin-top:6px; float:right;"/>
+				</p>
+				</div>
+				
+				<div id="form_submitted" >
+					<p> Thank you for contacting us! We will be in touch shortly.</p>
+				</div>
+	
+			</form>
+		</div>
+			
+</div>
+
+{% endblock %}

@@ -1,4 +1,5 @@
 from django.conf.urls import patterns, include, url
+from views import index, about, process, gallery_additions, gallery_remodeling, gallery_kitchens, gallery_bathrooms, gallery_decks, contact
 
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
@@ -14,4 +15,15 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     # url(r'^admin/', include(admin.site.urls)),
+
+	url(r'^$', index),
+	url(r'index', index),
+	url(r'about', about),
+	url(r'process', process),
+	url(r'gallery_additions', gallery_additions),
+	url(r'gallery_remodeling', gallery_remodeling),
+	url(r'gallery_decks', gallery_decks),
+	url(r'gallery_kitchens', gallery_kitchens),
+	url(r'gallery_bathrooms', gallery_bathrooms),
+	url(r'contact', contact),
 )
