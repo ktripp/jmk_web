@@ -4,8 +4,8 @@
 {% block staticfiles %}
     {% load staticfiles %}
 	<script type="text/javascript" src="{% static "galleria/galleria-1.2.9.min.js" %}"></script>
-    <script type="text/javascript" src="{% static "galleria/themes/twelve/galleria.twelve.min.js" %}"></script>
-    <link rel="stylesheet" type="text/css" href="{% static "galleria/themes/twelve/galleria.twelve.css" %}" />
+    <script type="text/javascript" src="{% static "galleria/themes/classic/galleria.classic.min.js" %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static "galleria/themes/classic/galleria.classic.css" %}" />
 {% endblock %}
 
 
@@ -49,7 +49,7 @@
 </div>
 
 <script>
-    Galleria.loadTheme("{% static "galleria/themes/twelve/galleria.twelve.min.js" %}");
+    Galleria.loadTheme("{% static "galleria/themes/classic/galleria.classic.min.js" %}");
     Galleria.configure({
         lightbox: true,
         showInfo: true,
